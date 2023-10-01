@@ -1,0 +1,32 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.button-wrapper {
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    background-color: white;
+}
+
+.button-wrapper button {
+    margin: auto;
+    padding: 8px;
+    border-radius: 0.25rem;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
