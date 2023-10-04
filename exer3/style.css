@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+button {
+    padding: 4px 12px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#decrement {
+    background-color: red;
+}
+
+#increment {
+    background-color: green;
+}
