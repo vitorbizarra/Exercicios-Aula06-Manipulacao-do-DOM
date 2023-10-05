@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .content {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .wrapper {
+            margin: auto;
+        }
+
+        .input-area {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        input {
+            padding: 2px;
+            border: 1px solid black;
+        }
+
+        .button-area {
+            padding: 12px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        button {
+            padding: 4px 12px;
+            border: 1px solid black;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="wrapper">
+            <div class="input-area">
+                <input type="number" name="" id="">
+                <span class="operator"></span>
+                <input type="number" name="" id="">
+                <span>=</span>
+                <span id="result"></span>
+            </div>
+            <div class="button-area">
+                <button type="button">+</button>
+                <button type="button">-</button>
+                <button type="button">*</button>
+                <button type="button">/</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
