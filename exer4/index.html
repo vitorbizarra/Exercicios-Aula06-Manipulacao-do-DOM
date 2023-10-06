@@ -5,48 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            border: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .content {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-        }
-
-        .wrapper {
-            margin: auto;
-        }
-
-        .input-area {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        input {
-            padding: 2px;
-            border: 1px solid black;
-        }
-
-        .button-area {
-            padding: 12px;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        button {
-            padding: 4px 12px;
-            border: 1px solid black;
-            border-radius: 2px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -69,52 +28,6 @@
     </div>
 </body>
 
-<script>
-    function calculate(operator, x, y) {
-        var result;
-        switch (operator) {
-            case "+":
-                result = x + y;
-                break;
-            case "-":
-                result = x - y;
-                break;
-            case "x":
-                result = x * y;
-                break;
-            case "÷":
-                if (y == 0) {
-                    throw new Error('Impossível dividir por zero');
-                }
-                result = x / y;
-                break;
-        }
-
-        return result;
-    }
-
-    const buttons = document.querySelectorAll('.operator-btn');
-
-    const numA = document.getElementById('numA')
-    const numB = document.getElementById('numB')
-
-    const operator = document.getElementById('operator')
-
-    const resultLabel = document.getElementById('resultLabel')
-
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', function () {
-            try {
-                operator.innerText = btn.innerHTML
-
-                var result = calculate(btn.innerHTML, parseInt(numA.value), parseInt(numB.value))
-                resultLabel.innerText = result
-            } catch (e) {
-                alert(e)
-            }
-        })
-    });
-</script>
+<script src="script.js"></script>
 
 </html>

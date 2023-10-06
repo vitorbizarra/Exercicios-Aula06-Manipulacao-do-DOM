@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.wrapper {
+    margin: auto;
+}
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+input {
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.button-area {
+    padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 4px 12px;
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+}
