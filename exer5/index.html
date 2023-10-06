@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .content {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            background-color: cadetblue;
+        }
+
+        .wrapper {
+            margin: auto;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: white;
+        }
+
+        textarea {
+            border: 1px solid black;
+            padding: 1rem;
+            resize: vertical;
+        }
+
+        .button-area {
+            margin: auto;
+            width: 100%;
+        }
+
+        button {
+            padding: 6px 18px;
+            width: auto;
+            background-color: cadetblue;
+            color: white;
+            font-weight: 600;
+            font-size: medium;
+            border-radius: 4px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="wrapper">
+            <textarea id="text" rows="10"
+                placeholder="Digite aqui uma frase ou um texto para saber quantas palavras tem"></textarea>
+            <div class="button-area">
+                <button type="button" id="btn">Contar Palavras</button>
+            </div>
+            <div class="result-area">
+                <h4>Palavras: <span id="result-label"></span></h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const textarea = document.getElementById('text');
+    const button = document.getElementById('btn');
+    const resultLabel = document.getElementById('result-label');
+
+    const countWords = () => textarea.value.split(' ').length;
+
+    button.addEventListener('click', function () {
+        if (textarea.value.length < 1) {
+            alert('Digite o texto');
+            return;
+        }
+
+        var wordQuantity = countWords();
+
+        resultLabel.innerText = wordQuantity;
+    });
+</script>
+
+</html>
